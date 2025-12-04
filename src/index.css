@@ -1,106 +1,18 @@
 /* ฟอนต์ */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@200;300;400;500;600;700&family=Prompt:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
-/* --------------------------
-   ธีมสีหลัก (Green Nature)
---------------------------- */
-:root {
-  --primary: #4CAF50;
-  --primary-soft: #8BC34A;
-  --bg-light: #f2f7f3;
-  --bg-card: #ffffff;
-  --bg-highlight: #d6f5d6;
-  --text-dark: #2f3e2f;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-body {
+/* ตั้งค่ามาตรฐานให้รองรับทุกอุปกรณ์ */
+html, body {
   font-family: "Prompt", sans-serif;
-  background: var(--bg-light);
-  color: var(--text-dark);
   margin: 0;
   padding: 0;
-}
-
-/* --------------------------
-   Card รูปสวนสัตว์
---------------------------- */
-.zoo-img {
-  height: 200px;
   width: 100%;
-  object-fit: cover;
+  overflow-x: hidden; /* ป้องกันการแตก-ล้นหน้าจอ */
+  -webkit-font-smoothing: antialiased;
 }
 
-.card {
-  border-radius: 14px;
-  background: var(--bg-card);
-  box-shadow: var(--shadow);
-  border: none;
-  transition: 0.25s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-/* --------------------------
-   ปุ่มสไตล์โทนเดียวกัน
---------------------------- */
-.btn-primary {
-  background: var(--primary) !important;
-  border-color: var(--primary) !important;
-}
-
-.btn-success {
-  background: var(--primary-soft) !important;
-  border-color: var(--primary-soft) !important;
-}
-
-.btn-warning {
-  background: #ffca28 !important;
-  border: none !important;
-}
-
-.btn-danger {
-  background: #ef5350 !important;
-  border: none !important;
-}
-
-/* ปุ่มแบบ Soft */
-.btn-soft {
-  background: var(--bg-highlight);
-  color: var(--primary);
-  border-radius: 10px;
-  padding: 8px 14px;
-  border: none;
-  font-weight: 600;
-}
-
-/* --------------------------
-   Responsive
---------------------------- */
-@media (max-width: 576px) {
-  .zoo-img { height: 150px; }
-
-  h1.h4 { font-size: 18px; }
-
-  .card-title { font-size: 16px; }
-
-  .card-text { font-size: 12px; }
-
-  .card:hover { transform: none !important; }
-
-  .container {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .zoo-img { height: 170px; }
-}
-
-@media (min-width: 992px) {
-  .container { max-width: 1100px; }
+/* ป้องกัน UI กระโดดบนจอเล็ก */
+* {
+  box-sizing: border-box;
 }
